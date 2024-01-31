@@ -1,0 +1,139 @@
+.main-page img{
+  height: 450px;
+  margin-top: 10%; 
+  margin-left: 38%; 
+  
+}
+
+.headers {
+    grid-area: header;
+    height: 158%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px 0px 30px;
+    box-shadow: 0 6px 7px -3px rgb(244, 244, 244);
+    background-color: rgb(101, 47, 101);
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  .icon {
+    vertical-align: middle;
+    line-height: 65px;
+    font-size: 40px;
+  }
+  .icon_header {
+    vertical-align: middle;
+    line-height: 8px;
+    font-size: 26px;
+  }
+  .icon, .icon_header {
+    margin-right: 5px;
+  }
+  
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-size:900px;
+    color: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .icon {
+    vertical-align: middle;
+    line-height: 7px;
+    
+  }
+  .icon_header {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 30px;
+  }
+  .icon, .icon_header {
+    margin-right: 5px;
+  }
+  
+  .close_icon {
+    color: red;
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 360px 9fr 0.5fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'sidebar header header header'
+      'sidebar main main main';
+    height: 100vh;
+  }
+/* sidebar css */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #a9aca7;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 40px;
+  background-color: rgb(101, 47, 101);
+  height: 10%;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand img {
+  width:360px;
+  margin-top: 2%;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type:none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 20px;
+  height: 70px;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(213, 228, 128, 0.556);
+  cursor: pointer;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #191919;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
